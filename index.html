@@ -2,21 +2,22 @@
 <html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>موقعي</title>
+  <title>موقعي مع AI</title>
 </head>
 <body>
 
-  <h1>الموقع شغال ✅</h1>
+  <h1>🚀 الموقع شغال + Backend</h1>
 
-  <button onclick="sayHi()">اضغط هنا</button>
+  <label for="userInput">اكتب رسالتك:</label><br>
+  <input type="text" id="userInput" placeholder="اكتب هنا..." style="width:300px;">
+  <button onclick="sendToBackend()">ارسل</button>
 
-  <p id="result"></p>
+  <p id="result" style="margin-top:20px; font-weight:bold;"></p>
 
   <script>
-    function sayHi() {
-      document.getElementById("result").innerText = "الزر اشتغل 🎉";
-    }
-  </script>
+    async function sendToBackend() {
+      const input = document.getElementById("userInput").value;
+      const resultEl = document.getElementById("result");
 
-</body>
-</html>
+      if (!input) {
+        resultEl.innerText = "❌ اكتب رسالة أولًا
